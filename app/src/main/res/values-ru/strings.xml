@@ -5,6 +5,12 @@
     <string name="show_air_pressure">Показать атмосферное давление</string>
     <string name="show_wind_speed">Показать скорость ветра</string>
     <string name="show_weather_forecast">Показать прогноз погоды</string>
+    <string name="your_city_name">Ваш город</string>
+    <string name="cel">°C</string>
+    <string name="wind_speed_is">Скорость ветра:</string>
+    <string name="m_s">м/с</string>
+    <string name="air_pressure_is">Атмосферное \n давление:</string>
+    <string name="mm_hg">мм рт.ст.</string>
 
     <string-array name="cities">
         <item>Москва</item>

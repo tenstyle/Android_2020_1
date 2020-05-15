@@ -4,6 +4,12 @@
     <string name="show_air_pressure">Show air pressure</string>
     <string name="show_wind_speed">Show wind speed</string>
     <string name="show_weather_forecast">Show weather forecast</string>
+    <string name="your_city_name">Your city name</string>
+    <string name="cel">°C</string>
+    <string name="wind_speed_is">Wind speed is:</string>
+    <string name="m_s">m/s</string>
+    <string name="air_pressure_is">Air pressure is:</string>
+    <string name="mm_hg">mm Hg</string>
 
     <string-array name="cities">
         <item>Moscow</item>
