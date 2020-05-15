@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Прогноз погоды</string>
+    <string name="enter_city_name">Введите название города</string>
+    <string name="show_air_pressure">Показать атмосферное давление</string>
+    <string name="show_wind_speed">Показать скорость ветра</string>
+    <string name="show_weather_forecast">Показать прогноз погоды</string>
+
+    <string-array name="cities">
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Казань</item>
+        <item>Екатеринбург</item>
+        <item>Иркутск</item>
+        <item>Владивосток</item>
+        <item>Сочи</item>
+    </string-array>
+</resources>

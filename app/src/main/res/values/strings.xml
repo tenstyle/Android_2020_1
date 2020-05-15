@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Weather Forecast</string>
+    <string name="enter_city_name">Enter city name</string>
+    <string name="show_air_pressure">Show air pressure</string>
+    <string name="show_wind_speed">Show wind speed</string>
+    <string name="show_weather_forecast">Show weather forecast</string>
+
+    <string-array name="cities">
+        <item>Moscow</item>
+        <item>Saint Petersburg</item>
+        <item>Kazan</item>
+        <item>Ekaterinburg</item>
+        <item>Irkutsk</item>
+        <item>Vladivostok</item>
+        <item>Sochi</item>
+    </string-array>
 </resources>
