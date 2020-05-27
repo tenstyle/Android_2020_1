@@ -1,15 +1,12 @@
 package ru.tenstyle.weatherforecast;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.CheckBox;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Arrays;
@@ -17,103 +14,76 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    CheckBox checkBoxShowWind, checkBoxShowPressure;
+    String pressureCity, speedCity, celsiusCity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         initViews();
-
-        Log.d("myLog", "onCreate()");
-        Toast.makeText(getApplicationContext(), "onCreate()", Toast.LENGTH_SHORT).show();
-
-        // Временный код для проверки сохранения данных при смене ориентации экрана
-
-        temporarySavingState();
-
     }
 
-    private void temporarySavingState() {
-        final TextView textCounter = findViewById(R.id.textCounter);
-        final TextView textCounter2 = findViewById(R.id.textCounter2);
-        final Singleton presenter = Singleton.getInstance();
-        textCounter.setText(((Integer)presenter.getCounter()).toString());
-        textCounter2.setText(((Integer)presenter.getCounter2()).toString());
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {      // Обработка нажатий
-            @Override
-            public void onClick(View v) {
-                presenter.incrementCounter();
-                textCounter.setText(((Integer)presenter.getCounter()).toString());
-                textCounter2.setText(((Integer)presenter.getCounter2()).toString());
-            }
-        });
-    }
 
     private void initViews() {
         AutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
         String[] cities = getResources().getStringArray(R.array.cities);
-        List<String> catList = Arrays.asList(cities);
+        List<String> cityList = Arrays.asList(cities);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                this, android.R.layout.simple_dropdown_item_1line, catList);
+                this, android.R.layout.simple_dropdown_item_1line, cityList);
         autoCompleteTextView.setAdapter(adapter);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d("myLog", "onStart()");
-        Toast.makeText(getApplicationContext(), "onStart()", Toast.LENGTH_SHORT).show();
-    }
+    public void onForecastBtnClick(View view) {
+        Intent intent = new Intent(this, ForecastActivity.class);
+        String[] cities = getResources().getStringArray(R.array.cities);
+        AutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+        String cityName = autoCompleteTextView.getText().toString();
 
-    @Override
-    protected void onRestoreInstanceState(@NonNull Bundle saveInstanceState) {
-        super.onRestoreInstanceState(saveInstanceState);
-        Log.d("myLog", "onRestoreInstanceState()");
-        Toast.makeText(getApplicationContext(), "onRestoreInstanceState()",
-                Toast.LENGTH_SHORT).show();
-    }
+        if (cityName.equals(cities[0])) {
+            celsiusCity = "+15";
+            speedCity = "4";
+            pressureCity = "760";
+        } else if (cityName.equals(cities[1])) {
+            celsiusCity = "+20";
+            speedCity = "6";
+            pressureCity = "758";
+        } else if (cityName.equals(cities[2])) {
+            celsiusCity = "+22";
+            speedCity = "1";
+            pressureCity = "770";
+        } else if (cityName.equals(cities[3])) {
+            celsiusCity = "+10";
+            speedCity = "26";
+            pressureCity = "746";
+        } else if (cityName.equals(cities[4])) {
+            celsiusCity = "-2";
+            speedCity = "18";
+            pressureCity = "780";
+        } else if (cityName.equals(cities[5])) {
+            celsiusCity = "+18";
+            speedCity = "3";
+            pressureCity = "760";
+        } else if (cityName.equals(cities[6])) {
+            celsiusCity = "+33";
+            speedCity = "2";
+            pressureCity = "773";
+        } else {
+            celsiusCity = "+463";
+            speedCity = "128";
+            pressureCity = "2760";
+        }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d("myLog", "onResume()");
-        Toast.makeText(getApplicationContext(), "onResume()", Toast.LENGTH_SHORT).show();
-    }
+        checkBoxShowWind = findViewById(R.id.checkBoxWind);
+        checkBoxShowPressure = findViewById(R.id.checkBoxPressure);
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d("myLog", "onPause()");
-        Toast.makeText(getApplicationContext(), "onPause()", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle saveInstanceState) {
-        super.onSaveInstanceState(saveInstanceState);
-        Log.d("myLog", "onSaveInstanceState()");
-        Toast.makeText(getApplicationContext(), "onSaveInstanceState()",
-                Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.d("myLog", "onStop()");
-        Toast.makeText(getApplicationContext(), "onStop()", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.d("myLog", "onRestart()");
-        Toast.makeText(getApplicationContext(), "onRestart()", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d("myLog", "onDestroy()");
-        Toast.makeText(getApplicationContext(), "onDestroy()", Toast.LENGTH_SHORT).show();
+        intent.putExtra(ForecastActivity.CITYNAME, cityName);
+        intent.putExtra(ForecastActivity.CELSIUSCITY, celsiusCity);
+        intent.putExtra(ForecastActivity.SPEEDCITY, speedCity);
+        intent.putExtra(ForecastActivity.PRESSURECITY, pressureCity);
+        intent.putExtra(ForecastActivity.CHECKBOXWIND, checkBoxShowWind.isChecked());
+        intent.putExtra(ForecastActivity.CHECKBOXPRESSURE, checkBoxShowPressure.isChecked());
+        startActivity(intent);
     }
 }

@@ -10,7 +10,7 @@
     <string name="wind_speed_is">Скорость ветра:</string>
     <string name="m_s">м/с</string>
     <string name="air_pressure_is">Атмосферное \n давление:</string>
-    <string name="mm_hg">мм рт.ст.</string>
+    <string name="mm_hg">мм \n рт.ст.</string>
 
     <string-array name="cities">
         <item>Москва</item>

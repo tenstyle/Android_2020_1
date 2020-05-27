@@ -12,13 +12,12 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/cityNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:text="@string/your_city_name"
             android:textColor="#ffffff"
             android:textSize="40sp"
             android:textStyle="bold"
@@ -27,14 +26,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/forecastImageView"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:srcCompat="@drawable/sun_with_cloud"
+            app:layout_constraintTop_toBottomOf="@+id/cityNameTextView"
             tools:ignore="ContentDescription" />
 
         <TextView
@@ -43,14 +41,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="+20"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="55sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.415"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/forecastImageView" />
 
         <TextView
             android:id="@+id/textViewCelsius"
@@ -75,6 +72,7 @@
             android:textAlignment="textEnd"
             android:textColor="#ffffff"
             android:textSize="20sp"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.189"
             app:layout_constraintStart_toStartOf="parent"
@@ -86,16 +84,16 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_weight="1"
-            android:text="5"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="35sp"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/textViewWind"
             app:layout_constraintStart_toEndOf="@+id/textViewWind"
             app:layout_constraintTop_toTopOf="@+id/textViewWind" />
 
         <TextView
-            android:id="@+id/textMPS"
+            android:id="@+id/textViewMPS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -104,6 +102,7 @@
             android:textAlignment="viewStart"
             android:textColor="#ffffff"
             android:textSize="35sp"
+            android:visibility="gone"
             app:layout_constraintStart_toEndOf="@+id/textSpeedCity"
             app:layout_constraintTop_toTopOf="@+id/textSpeedCity" />
 
@@ -116,6 +115,7 @@
             android:textAlignment="textEnd"
             android:textColor="#ffffff"
             android:textSize="20sp"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.15"
             app:layout_constraintStart_toStartOf="parent"
@@ -127,11 +127,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_weight="1"
-            android:text="760"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="35sp"
-            app:layout_constraintBottom_toBottomOf="@+id/textViewAir"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textViewAir"
             app:layout_constraintTop_toTopOf="@+id/textViewAir" />
 
@@ -142,9 +142,10 @@
             android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:text="@string/mm_hg"
-            android:textAlignment="viewStart"
             android:textColor="#ffffff"
-            android:textSize="35sp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:visibility="gone"
             app:layout_constraintStart_toEndOf="@+id/textPressureCity"
             app:layout_constraintTop_toTopOf="@+id/textPressureCity" />
 
