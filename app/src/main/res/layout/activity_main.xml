@@ -6,7 +6,7 @@
     android:background="@drawable/dawn" >
 
     <fragment
-        android:name="ru.tenstyle.weatherforecast.CityListFragment"
+        android:name="ru.tenstyle.weatherforecast.CityFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/city_list_frag" />

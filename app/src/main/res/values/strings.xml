@@ -11,13 +11,21 @@
     <string name="air_pressure_is">Air pressure is:</string>
     <string name="mm_hg">mm Hg</string>
 
+    <string name="moscow">Moscow</string>
+    <string name="saint_petersburg">Saint Petersburg</string>
+    <string name="kazan">Kazan</string>
+    <string name="ekaterinburg">Ekaterinburg</string>
+    <string name="irkutsk">Irkutsk</string>
+    <string name="vladivostok">Vladivostok</string>
+    <string name="sochi">Sochi</string>
+
     <string-array name="cities">
-        <item>Moscow</item>
-        <item>Saint Petersburg</item>
-        <item>Kazan</item>
-        <item>Ekaterinburg</item>
-        <item>Irkutsk</item>
-        <item>Vladivostok</item>
-        <item>Sochi</item>
+        <item>@string/moscow</item>
+        <item>@string/saint_petersburg</item>
+        <item>@string/kazan</item>
+        <item>@string/ekaterinburg</item>
+        <item>@string/irkutsk</item>
+        <item>@string/vladivostok</item>
+        <item>@string/sochi</item>
     </string-array>
 </resources>

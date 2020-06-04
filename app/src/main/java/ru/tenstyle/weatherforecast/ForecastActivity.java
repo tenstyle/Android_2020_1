@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.res.Configuration;
 import android.os.Bundle;
 
+import java.util.Objects;
+
 public class ForecastActivity extends AppCompatActivity {
     public static final String EXTRA_FORECAST_ID = "id";
 
@@ -21,7 +23,8 @@ public class ForecastActivity extends AppCompatActivity {
 
         ForecastFragment frag = (ForecastFragment)
                 getSupportFragmentManager().findFragmentById(R.id.forecast_frag);
-        int forecastId = (int) getIntent().getExtras().get(EXTRA_FORECAST_ID);
+        int forecastId = (int) Objects.requireNonNull(getIntent().getExtras()).get(EXTRA_FORECAST_ID);
+        assert frag != null;
         frag.setForecast(forecastId);
     }
 }

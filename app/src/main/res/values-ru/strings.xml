@@ -12,13 +12,21 @@
     <string name="air_pressure_is">Атмосферное \n давление:</string>
     <string name="mm_hg">мм \n рт.ст.</string>
 
+    <string name="moscow">Москва</string>
+    <string name="saint_petersburg">Санкт-Петербург</string>
+    <string name="kazan">Казань</string>
+    <string name="ekaterinburg">Екатеринбург</string>
+    <string name="irkutsk">Иркутск</string>
+    <string name="vladivostok">Владивосток</string>
+    <string name="sochi">Сочи</string>
+
     <string-array name="cities">
-        <item>Москва</item>
-        <item>Санкт-Петербург</item>
-        <item>Казань</item>
-        <item>Екатеринбург</item>
-        <item>Иркутск</item>
-        <item>Владивосток</item>
-        <item>Сочи</item>
+        <item>@string/moscow</item>
+        <item>@string/saint_petersburg</item>
+        <item>@string/kazan</item>
+        <item>@string/ekaterinburg</item>
+        <item>@string/irkutsk</item>
+        <item>@string/vladivostok</item>
+        <item>@string/sochi</item>
     </string-array>
 </resources>
