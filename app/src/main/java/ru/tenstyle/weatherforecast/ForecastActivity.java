@@ -14,8 +14,8 @@ public class ForecastActivity extends AppCompatActivity {
     public static final String CELSIUSCITY = "0";
     public static final String SPEEDCITY = "5";
     public static final String PRESSURECITY = "760";
-    public static final String CHECKBOXWIND = "false";
-    public static final String CHECKBOXPRESSURE = "false";
+    public static final String CHECKBOXWIND = "wind";
+    public static final String CHECKBOXPRESSURE = "pressure";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

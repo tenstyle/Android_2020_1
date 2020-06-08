@@ -10,6 +10,11 @@
     <string name="m_s">m/s</string>
     <string name="air_pressure_is">Air pressure is:</string>
     <string name="mm_hg">mm Hg</string>
+    <string name="error">Too short city name!</string>
+    <string name="close_app">Close app</string>
+    <string name="are_you_shure">Are you shure?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
 
     <string-array name="cities">
         <item>Moscow</item>

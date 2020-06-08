@@ -21,4 +21,9 @@
         <item>Владивосток</item>
         <item>Сочи</item>
     </string-array>
+    <string name="error">Название города слишком короткое!</string>
+    <string name="close_app">Выход</string>
+    <string name="are_you_shure">Вы уверены?</string>
+    <string name="ok">Да</string>
+    <string name="cancel">Отмена</string>
 </resources>
