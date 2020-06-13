@@ -1,29 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Прогноз погоды</string>
-    <string name="enter_city_name">Введите название города</string>
-    <string name="show_air_pressure">Показать атмосферное давление</string>
-    <string name="show_wind_speed">Показать скорость ветра</string>
-    <string name="show_weather_forecast">Показать прогноз погоды</string>
-    <string name="your_city_name">Ваш город</string>
-    <string name="cel">°C</string>
-    <string name="wind_speed_is">Скорость ветра:</string>
-    <string name="m_s">м/с</string>
-    <string name="air_pressure_is">Атмосферное \n давление:</string>
-    <string name="mm_hg">мм \n рт.ст.</string>
-
-    <string-array name="cities">
-        <item>Москва</item>
-        <item>Санкт-Петербург</item>
-        <item>Казань</item>
-        <item>Екатеринбург</item>
-        <item>Иркутск</item>
-        <item>Владивосток</item>
-        <item>Сочи</item>
-    </string-array>
-    <string name="error">Название города слишком короткое!</string>
-    <string name="close_app">Выход</string>
-    <string name="are_you_shure">Вы уверены?</string>
-    <string name="ok">Да</string>
-    <string name="cancel">Отмена</string>
+    <string name="weather">Прогноз погоды</string>
+    <string name="city_name">Поиск</string>
+    <string name="moscow">Москва</string>
+    <string name="saint_petersburg">Санкт-Петербург</string>
+    <string name="kazan">Казань</string>
+    <string name="ekaterinburg">Екатеринбург</string>
+    <string name="irkutsk">Иркутск</string>
+    <string name="vladivostok">Владивосток</string>
+    <string name="sochi">Сочи</string>
+    <string name="show">Показать прогноз погоды</string>
+    <string name="wind">Ветер</string>
+    <string name="humidity">Влажность</string>
+    <string name="_7">7°</string>
+    <string name="direction">Направление Север</string>
+    <string name="speed">Скорость 12 28 Км/ч</string>
+    <string name="_67">67%</string>
+    <string name="settings">Настройки</string>
+    <string name="night_theme">Ночная тема</string>
+    <string name="off">Выкл</string>
+    <string name="on">Вкл</string>
+    <string name="back">Фон</string>
+    <string name="wiki">Вики</string>
+    <string name="dark_theme">Ночная тема</string>
+    <string name="speedEd">м/с</string>
+    <string name="cloud_image">рисунок облака</string>
+    <string name="n">Север</string>
+    <string name="nne">Северо-Северо-Восток</string>
+    <string name="ne">Северо-Восток</string>
+    <string name="ene">Восток-Северо-Восток</string>
+    <string name="e">Восток</string>
+    <string name="ese">Восток-Юго-Восток</string>
+    <string name="se">Юго-Восток</string>
+    <string name="sse">Юго-Юго-Восток</string>
+    <string name="s">Юг</string>
+    <string name="ssw">Юго-Юго-Запад</string>
+    <string name="sw">Юго-запад</string>
+    <string name="wsw">Запад-Юго-Запад</string>
+    <string name="w">Запад</string>
+    <string name="wnw">Запад-Северо-Запад</string>
+    <string name="nw">Северо-Запад</string>
+    <string name="nnw">Северо-Северо-Запад</string>
+    <string name="choseCity">Имя города должно начинаться с заглавной буквы</string>
+    <string name="cloudy">Облачно</string>
+    <string name="rain">Дождь</string>
+    <string name="sun">Солнце</string>
+    <string name="clear">Ясно</string>
+    <string name="snow">Снег</string>
+    <string name="fog">Туман</string>
 </resources>

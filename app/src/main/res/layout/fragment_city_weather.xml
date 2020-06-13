@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorPrimary"
+    android:id="@+id/coordinator">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/image_weather"
+                android:src="@drawable/cloudy"
+                android:contentDescription="@string/cloud_image"
+                app:layout_collapseMode="parallax"/>
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_marginBottom="30dp"
+        android:background="?android:attr/colorPrimary"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/cityNameAfter"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/moscow"
+                android:textColor="?android:attr/textColor"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tempOn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/_7"
+                android:textColor="?android:attr/textColor"
+                android:textSize="50sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/weather"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="25dp"
+                android:text="@string/_7"
+                android:textSize="30sp"
+                android:textColor="?android:attr/textColor"/>
+
+            <TextView
+                android:id="@+id/humidityIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="@string/humidity"
+                android:textColor="?android:attr/textColor"
+                android:textSize="30sp" />
+
+
+            <ProgressBar
+                android:id="@+id/humidityProgress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+
+                android:max="100"
+                android:progress="67"
+                android:scrollbarStyle="outsideInset" />
+            <TextView
+                android:id="@+id/humidityPercent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:gravity="center"
+                android:text="@string/_67"
+                android:textColor="?android:attr/textColor"
+                android:textSize="30sp" />
+            <TextView
+                android:id="@+id/windIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="@string/wind"
+                android:textColor="?android:attr/textColor"
+                android:textSize="30sp" />
+            <TextView
+                android:id="@+id/direction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="center"
+                android:text="@string/direction"
+                android:textColor="?android:attr/textColor"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/speed"
+                android:textColor="?android:attr/textColor"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

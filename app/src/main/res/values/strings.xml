@@ -1,28 +1,51 @@
 <resources>
     <string name="app_name">Weather Forecast</string>
-    <string name="enter_city_name">Enter city name</string>
-    <string name="show_air_pressure">Show air pressure</string>
-    <string name="show_wind_speed">Show wind speed</string>
-    <string name="show_weather_forecast">Show weather forecast</string>
-    <string name="your_city_name">Your city name</string>
-    <string name="cel">°C</string>
-    <string name="wind_speed_is">Wind speed is:</string>
-    <string name="m_s">m/s</string>
-    <string name="air_pressure_is">Air pressure is:</string>
-    <string name="mm_hg">mm Hg</string>
-    <string name="error">Too short city name!</string>
-    <string name="close_app">Close app</string>
-    <string name="are_you_shure">Are you shure?</string>
-    <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
-
-    <string-array name="cities">
-        <item>Moscow</item>
-        <item>Saint Petersburg</item>
-        <item>Kazan</item>
-        <item>Ekaterinburg</item>
-        <item>Irkutsk</item>
-        <item>Vladivostok</item>
-        <item>Sochi</item>
-    </string-array>
+    <string name="dark_theme">Dark theme</string>
+    <string name="weather">Weather forecast</string>
+    <string name="city_name">Search</string>
+    <string name="moscow">Moscow</string>
+    <string name="saint_petersburg">Saint Petersburg</string>
+    <string name="kazan">Kazan</string>
+    <string name="ekaterinburg">Ekaterinburg</string>
+    <string name="irkutsk">Irkutsk</string>
+    <string name="vladivostok">Vladivostok</string>
+    <string name="sochi">Sochi</string>
+    <string name="show">Show weather forecast</string>
+    <string name="wind">Wind</string>
+    <string name="humidity">Humidity</string>
+    <string name="_7">7°</string>
+    <string name="direction">Direction    North</string>
+    <string name="speed">Speed    12 28 km/h</string>
+    <string name="_67">67%</string>
+    <string name="settings">Settings</string>
+    <string name="night_theme">Night theme</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+    <string name="back">BACK</string>
+    <string name="wiki">Wiki</string>
+    <string name="speedEd">m/s</string>
+    <string name="cloud_image">cloudy_image</string>
+    <string name="n">North</string>
+    <string name="nne">North North East</string>
+    <string name="ne">North East</string>
+    <string name="ene">East North East</string>
+    <string name="e">East</string>
+    <string name="ese">East South East</string>
+    <string name="se">South East</string>
+    <string name="sse"> South South East</string>
+    <string name="s">South</string>
+    <string name="ssw">South South West</string>
+    <string name="sw">South West</string>
+    <string name="wsw">West South West</string>
+    <string name="w">West</string>
+    <string name="wnw">West North West</string>
+    <string name="nw">North West</string>
+    <string name="nnw">North North West</string>
+    <string name="choseCity">The city name must begin with a capital letter</string>
+    <string name="cloudy">Cloudy</string>
+    <string name="rain">Rain</string>
+    <string name="sun">Sun</string>
+    <string name="clear">Clear</string>
+    <string name="snow">Snow</string>
+    <string name="fog">Fog</string>
 </resources>

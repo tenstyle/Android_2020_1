@@ -1,22 +1,39 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="Theme.Weather" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
     </style>
 
-    <!--Floating label text style-->
-    <style name="MyHintText" parent="TextAppearance.AppCompat.Small">
-        <item name="android:textColor">@color/pink</item>
+    <style name="Theme.Weather.Day" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryDay</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDayDark</item>
+        <item name="colorAccent">@color/colorAccentDay</item>
+        <item name="android:textColor">@color/colorTextPrimaryDark</item>
     </style>
 
-    <!--Input field style-->
-    <style name="MyEditText" parent="Theme.AppCompat.Light">
-        <item name="colorControlNormal">@color/indigo</item>
-        <item name="colorControlActivated">@color/pink</item>
+    <style name="TempText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textColor">?android:attr/textColor</item>
+        <item name="android:textSize">25sp</item>
     </style>
+
+    <style name="Widget.Weather.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">?android:attr/textColor</item>
+        <item name="backgroundTint">?attr/colorPrimaryDark</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">
+            @animator/weather_button_anim
+        </item>
+    </style>
+
+
 
 </resources>
